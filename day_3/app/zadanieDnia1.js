@@ -16,7 +16,7 @@ fs.readFile(fileAdress, 'utf8', (err, data) => {
 
         //---
         let hash = crypto.createHmac(alg, fileAdress)
-            .digest('hex');
+            .digest('hex');  // or 'base64'
         console.log(`\nFunkcja skrotu dla sciezki z argumentu, z uzyciem algorytmu: ${alg} ->\n ${hash}`);
 
     }
