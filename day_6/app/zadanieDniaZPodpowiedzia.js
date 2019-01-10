@@ -1,11 +1,7 @@
-//Twój kod
-
-
-
-// Funkcje pomocnicze
+//--- Funkcje pomocnicze
 
 /**
- * Ta funkcja pobiera string dotychczasowego ciastka, dodaje nowy komentarz i zwraca nowy string - taki z jakim należy nadpisać to ciasto.
+ * Ta funkcja pobiera string dotychczasowego ciastka, dodaje nowy komentarz i zwraca nowy string - taki z jakim należy nadpisać to ciastko.
  * @param {string} commentsCookieValue Wartość dotychczasowego ciastka przechowującego komentarze
  * @param {string} newComment Nowy komentarz
  * @return {string} Nowy string z komentarzami do zapisania w ciastku
@@ -24,3 +20,9 @@ function addComment(commentsCookieValue, newComment) {
 function readComments(commentsCookieValue) {
     return commentsCookieValue ? JSON.parse(commentsCookieValue) : [];
 }
+
+//---
+module.exports = {
+    readComments: readComments,
+    addComment: addComment
+};
